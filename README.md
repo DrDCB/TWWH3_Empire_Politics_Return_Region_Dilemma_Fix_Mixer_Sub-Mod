@@ -1,5 +1,5 @@
 # Empire Politics Region Return Dilemma Fix - Mixer Sub-Mod
-A mod for Total War Warhammer III. A compatibility sub-mod for my Empire Politics Region Return Dilemma Fix mod and Mixu's Mixer. Ensures that Mixer doesn't prevent region return dilemmas from occurring.
+A mod for Total War Warhammer III. A compatibility sub-mod for my [Empire Politics Region Return Dilemma Fix](https://github.com/DrDCB/TWWH3_Empire_Politics_Return_Region_Dilemma_Fix) mod and [Mixu's Mixer](https://steamcommunity.com/workshop/filedetails/?id=2859968660). Ensures that Mixer doesn't prevent region return dilemmas from occurring.
 
 **_IMPORTANT!_** Make sure that this mod is positioned **ABOVE** both the base Region Return Dilemma Fix mod *and* Mixer in the Mod Manager:
 
