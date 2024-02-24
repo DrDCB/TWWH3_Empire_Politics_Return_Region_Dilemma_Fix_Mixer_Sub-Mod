@@ -2033,7 +2033,8 @@ end
 function empire_occupation_decision(context)
 	local decision = context:occupation_decision()
 	local decision_type = context:occupation_decision_type();
-	local faction_key = context:character():faction():name();
+	local faction = context:character():faction()
+	local faction_key = faction:name();
 	local region = context:garrison_residence():region();
 	local region_key = region:name();
 
@@ -2042,7 +2043,7 @@ function empire_occupation_decision(context)
 		-- REINSTATE ELECTOR
 		local region_elector = get_elector_faction_from_region(region);
 		
-		if region_elector then
+		if region_elector and faction:is_human() then
 			empire_modify_elector_loyalty(region_elector, "reinstated_elector_count", 2);
 			cm:faction_add_pooled_resource(faction_key, "emp_imperial_authority", "elector_counts_reinstated", empire_authority_elector_revived);
 		end
@@ -2062,7 +2063,7 @@ function empire_occupation_decision(context)
 		-- RETURN TO ELECTOR
 		local region_elector = get_elector_faction_from_region(region);
 		
-		if region_elector then
+		if region_elector and faction:is_human() then
 			empire_modify_elector_loyalty(region_elector, "returned_settlements", 1);
 		end
 		cm:callback(
